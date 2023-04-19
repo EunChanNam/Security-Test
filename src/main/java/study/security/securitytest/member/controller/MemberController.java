@@ -20,4 +20,10 @@ public class MemberController {
         log.info("input password  = {}", password);
         return memberService.signUp(password);
     }
+
+    @PostMapping("/api/validate")
+    public boolean validate(@RequestParam String password) {
+        log.info("input password  = {}", password);
+        return memberService.validateIsSamePassword(password);
+    }
 }
