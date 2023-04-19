@@ -19,4 +19,8 @@ public class Member {
     private Long id;
 
     private String password;
+
+    public Member(String password) {
+        this.password = password;
+    }
 }
